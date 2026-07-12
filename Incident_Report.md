@@ -1,24 +1,25 @@
 ## Investigation
-Step 1 – Identify PowerShell Execution
+### Step 1 – Identify PowerShell Execution
 <img width="985" height="716" alt="Screenshot 2026-07-02 at 19 01 16" src="https://github.com/user-attachments/assets/b107394d-c10a-4ce9-8a63-a8421bca2f50" />
 
-Step 2 – Review Process Details
+### Step 2 – Review Process Details
 | Field            | Value                      |
 | ---------------- | -------------------------- |
 | User             | Jetros-Laptop\jetro        |
 | Process          | powershell.exe             |
 | Parent Process   | powershell.exe             |
 
-Step 3 – Analyze the Command Line
+### Step 3 – Analyze the Command Line
 <img width="1382" height="747" alt="Screenshot 2026-07-02 at 19 08 35" src="https://github.com/user-attachments/assets/d278bb64-caf7-4612-b267-87d69c497c1e" />
 
-Step 4 – Investigate File Creation
+### Step 4 – Investigate File Creation
 <img width="697" height="476" alt="Screenshot 2026-07-02 at 19 21 37" src="https://github.com/user-attachments/assets/d52c560f-44a1-48e9-81e0-f30bd1d0adfc" />
+
 ### Findings:
 - PowerShell created a temporary __PSScriptPolicyTest file (this is normal PowerShell behavior).
 - However the file example.html was confirmed to exist in the user's (Jetro) Temp directory.
 
-Step 5 – Child Process Analysis
+### Step 5 – Child Process Analysis
 - **Result:** No child processes were observed originating from the PowerShell process.
 
 ## Findings
